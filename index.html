@@ -3,7 +3,6 @@
   <script>
 	var supportsCanvas = !!document.createElement('canvas').getContext;
 	supportsCanvas && (window.onload = greyImages);
-
 	function greyImages() {
 		var ctx = document.getElementsByTagName("canvas")[0].getContext('2d'),
 			img = document.getElementById("cvs-src"),
@@ -38,8 +37,45 @@
 	     	    this.data[i+2] = gray;   
 	     	}
         }
+        ImageData.prototype.invert = function(){
+	       var px = this.data;
+    	   var length = px.length;
+    	   for (i = 0 ; i < length; i+= 4 ) {
+	      	    this.data[i] = 255 - px[i];
+	      	    this.data[i+1] = 255 - px[i+1];
+	     	    this.data[i+2] = 255 - px[i+2];   
+	     	}
+        }
+        ImageData.prototype.monoRed = function(){
+	       var px = this.data;
+    	   var length = px.length;
+    	   for (i = 0 ; i < length; i+= 4 ) {
+	      	    this.data[i+1] = 0;
+	     	    this.data[i+2] = 0;   
+	     	}
+        }
+        ImageData.prototype.monoGreen = function(){
+	       var px = this.data;
+    	   var length = px.length;
+    	   for (i = 0 ; i < length; i+= 4 ) {
+	      	    this.data[i] = 0;
+	     	    this.data[i+2] = 0;   
+	     	}
+        }
+        ImageData.prototype.monoBlue = function(){
+	       var px = this.data;
+    	   var length = px.length;
+    	   for (i = 0 ; i < length; i+= 4 ) {
+	      	    this.data[i] = 0;
+	     	    this.data[i+1] = 0;   
+	     	}
+        }
 
-		imageData.sepia();
+		//imageData.monoBlue();
+		//imageData.monoGreen();
+		//imageData.monoRed();
+		//imageData.invert();
+		//imageData.sepia();
 		//imageData.grayscale();
 		ctx.putImageData(imageData, 0, 0);
 	}
