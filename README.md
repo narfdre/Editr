@@ -39,4 +39,3 @@ API
 .monoRed()
 .monoBlue()
 .monoGreen()
-
