@@ -18,6 +18,7 @@ Vertical Flip(Can be accomplished by using rotate180() with flipHorizontal())
 Future Support
 ==============
 Revert
+Saturation
 More to come...
 
 Usage
@@ -50,5 +51,5 @@ API
 	.monoRed()
 	.monoBlue()
 	.monoGreen()
-	.rotate()
+	.rotate180()
 	.flipHorizontal()
