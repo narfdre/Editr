@@ -1,8 +1,4 @@
 var Editr = function (image) {
-	var jQuery = jQuery || {};
-	if (image instanceof jQuery) {
-		image = image.get(0);
-	}
 	var cvs = document.createElement('canvas'), ctx, imgData;
 	cvs.setAttribute('width', image.width);
 	cvs.setAttribute('height', image.height);
@@ -77,7 +73,7 @@ var Editr = function (image) {
 		return ctx;
 	}
 	//180 Rotate
-	ctx.rotate = function () {
+	ctx.rotate180 = function () {
 		var image = document.createElement('img');
 		image.setAttribute('src', ctx.canvas.toDataURL('image/png'));
 		ctx.translate(image.width-1, image.height-1);
