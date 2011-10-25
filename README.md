@@ -2,7 +2,7 @@ EditrJS
 ========
 A simple lightweight, library agnotistc image editor built in javascript. 
 
-Currently in version 0.9
+Currently in version 1.0
 
 Supported
 =========
