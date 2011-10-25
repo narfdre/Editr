@@ -4,7 +4,34 @@
   <meta charset='utf-8'>
 
   <title>narfdre/Editr @ GitHub</title>
-	<script src="Editr.js" type="text/javascript"></script>
+  <script src="Editr.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  	window.onload = loadEvents;
+  	function loadEvents(){
+	  	var img = document.getElementById('image');
+	  	var sepia = document.getElementById('sepia');
+	  	var grayscale = document.getElementById('grayscale');
+	  	var invert = document.getElementById('invert');
+	  	var vertical = document.getElementById('vertical');
+	  	var horizontal = document.getElementById('horizontal');
+	  	sepia.addEventListener('click', function(){
+		  	Editr(img).sepia().replace();
+	  	});
+	  	grayscale.addEventListener('click', function(){
+		  	Editr(img).grayScale().replace();
+	  	});
+	  	invert.addEventListener('click', function(){
+		  	Editr(img).invert().replace();
+	  	});
+	  	vertical.addEventListener('click', function(){
+		  	Editr(img).rotate().replace();
+	  	});
+	  	horizontal.addEventListener('click', function(){
+		  	Editr(img).flipHorizontal().replace();
+	  	});
+	  	
+	  }
+  </script>
   <style type="text/css">
     body {
       margin-top: 1.0em;
@@ -49,8 +76,14 @@
       Simple Photo Editor in Javascript
     </div>
     <div class="example">
-    	<img src="flower.jpg"/>
-    	<button id="sepia">Sepia</button>
+    	<img id="image" src="flower.jpg"/>
+    	<p>
+	    	<button id="sepia">Sepia</button>
+	    	<button id="grayscale">Gray Scale</button>
+	    	<button id="invert">Invert</button>
+	    	<button id="vertical">180 Rotate</button>
+	    	<button id="horizontal">Flip Horizontal</button>
+	    </p>
     </div>
 
     <h2>Authors</h2>
