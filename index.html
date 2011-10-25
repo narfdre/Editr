@@ -24,7 +24,7 @@
 		  	Editr(img).invert().replace();
 	  	});
 	  	vertical.addEventListener('click', function(){
-		  	Editr(img).rotate().replace();
+		  	Editr(img).rotate180().replace();
 	  	});
 	  	horizontal.addEventListener('click', function(){
 		  	Editr(img).flipHorizontal().replace();
@@ -76,12 +76,12 @@
       Simple Photo Editor in Javascript
     </div>
     <div class="example">
-    	<img id="image" src="flower.jpg"/>
+    	<img width="300" height="448" id="image" src="flower.jpg"/>
     	<p>
 	    	<button id="sepia">Sepia</button>
 	    	<button id="grayscale">Gray Scale</button>
 	    	<button id="invert">Invert</button>
-	    	<button id="vertical">180 Rotate</button>
+	    	<button id="vertical">Rotate 180</button>
 	    	<button id="horizontal">Flip Horizontal</button>
 	    </p>
     </div>
