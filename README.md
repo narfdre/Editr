@@ -12,7 +12,7 @@ Grayscale
 Inverted
 Monochromatic (Red, Green, Blue)
 Horizontal Flip
-Vertical Flip
+180 Rorate
 
 Future Support
 ==============
@@ -53,6 +53,6 @@ API
 
 .monoGreen()
 
-.flipVertical()
+.rotate()
 
 .flipHorizontal()

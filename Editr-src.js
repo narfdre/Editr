@@ -76,8 +76,8 @@ var Editr = function (image) {
 	    ctx.putImageData(imgData, 0, 0);
 		return ctx;
 	}
-	//Flip Vertically
-	ctx.flipVertical = function () {
+	//180 Rotate
+	ctx.rotate = function () {
 		var image = document.createElement('img');
 		image.setAttribute('src', ctx.canvas.toDataURL('image/png'));
 		ctx.translate(image.width-1, image.height-1);
